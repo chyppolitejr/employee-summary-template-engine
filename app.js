@@ -88,7 +88,10 @@ const promptContinue = () =>
       } else {
         console.log(data.addMoreMembers);
         console.log("Your are done adding team members");
-        console.log(JSON.stringify(employeeType));
+        //console.log(JSON.stringify(employeeType));
+        fs.writeFile(outputPath, render(employeeArray), (err) =>
+          err ? console.error(err) : console.log("file successfully written")
+        );
       }
     });
 

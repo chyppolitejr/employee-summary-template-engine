@@ -116,15 +116,4 @@ const promptContinue = () =>
 // object with the correct structure and methods. This structure will be crucial in order
 // for the provided `render` function to work! ```
 
-// this function is used to push answers to the different arrays for use when generating html
-// function addToArray(answers) {
-//   if (answers.employeeType === "Manager") {
-//     managerArray.push(answers);
-//   } else if (answers.employeeType === "Engineer") {
-//     engineerArray.push(answers);
-//   } else {
-//     internArray.push(answers);
-//   }
-// }
-
 promptUser().catch((err) => console.error(err));

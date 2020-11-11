@@ -10,6 +10,7 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+// arrays to hold answer for later use in html
 let internArray = [];
 let engineerArray = [];
 let managerArray = [];
@@ -65,6 +66,7 @@ const promptUser = () =>
       promptContinue().catch((err) => console.error(err));
     });
 
+// function to prompt users if they want to continue adding team members
 const promptContinue = () =>
   inquirer
     .prompt([
@@ -110,6 +112,7 @@ const promptContinue = () =>
 // object with the correct structure and methods. This structure will be crucial in order
 // for the provided `render` function to work! ```
 
+// this function is used to push answers to the different arrays for use when generating html
 function addToArray(answers) {
   if (answers.employeeType === "Manager") {
     managerArray.push(answers);

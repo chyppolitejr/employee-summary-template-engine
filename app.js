@@ -10,11 +10,15 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
-// arrays to hold answer for later use in html
-// let internArray = [];
-// let engineerArray = [];
-// let managerArray = [];
+// array to hold answer for later use in html
 let employeeArray = [];
+
+// check if output folder exists if not create it
+if (fs.existsSync(OUTPUT_DIR) === false) {
+  fs.mkdir(OUTPUT_DIR, (err) => {
+    if (err) throw err;
+  });
+}
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)

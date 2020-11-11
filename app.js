@@ -11,9 +11,10 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 
 // arrays to hold answer for later use in html
-let internArray = [];
-let engineerArray = [];
-let managerArray = [];
+// let internArray = [];
+// let engineerArray = [];
+// let managerArray = [];
+let employeeArray = [];
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
@@ -62,7 +63,8 @@ const promptUser = () =>
       },
     ])
     .then((answers) => {
-      addToArray(answers);
+      // addToArray(answers);
+      employeeArray.push(answers);
       promptContinue().catch((err) => console.error(err));
     });
 
@@ -113,14 +115,14 @@ const promptContinue = () =>
 // for the provided `render` function to work! ```
 
 // this function is used to push answers to the different arrays for use when generating html
-function addToArray(answers) {
-  if (answers.employeeType === "Manager") {
-    managerArray.push(answers);
-  } else if (answers.employeeType === "Engineer") {
-    engineerArray.push(answers);
-  } else {
-    internArray.push(answers);
-  }
-}
+// function addToArray(answers) {
+//   if (answers.employeeType === "Manager") {
+//     managerArray.push(answers);
+//   } else if (answers.employeeType === "Engineer") {
+//     engineerArray.push(answers);
+//   } else {
+//     internArray.push(answers);
+//   }
+// }
 
 promptUser().catch((err) => console.error(err));

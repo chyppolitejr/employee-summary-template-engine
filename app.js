@@ -84,9 +84,7 @@ const promptContinue = () =>
       } else {
         console.log(data.addMoreMembers);
         console.log("Your are done adding team members");
-        console.log(JSON.stringify(internArray));
-        console.log(JSON.stringify(engineerArray));
-        console.log(JSON.stringify(managerArray));
+        console.log(JSON.stringify(employeeType));
       }
     });
 

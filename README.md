@@ -10,6 +10,8 @@ This is a NodeJS command line application that allows you to build a team of int
 
 ## Application Demo
 
+https://youtu.be/ZASZJ47S8tE
+
 ## Installation
 
 download all files to local machine. Ensure NodeJS is installed as well as npm and Inquirer. Navigate to application folder via command line. Execute the app using "node app.js"
